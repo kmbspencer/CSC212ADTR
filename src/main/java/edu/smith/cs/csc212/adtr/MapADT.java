@@ -34,6 +34,9 @@ public abstract class MapADT<KeyType, ValueType> implements Iterable<Pair<KeyTyp
 	@Nullable
 	public abstract ValueType get(KeyType keyType);
 
+	public boolean contains(KeyType key) {
+		return this.get(key) != null;
+	}
 	/**
 	 * How many key-value mappings are in this data structure?
 	 * 
